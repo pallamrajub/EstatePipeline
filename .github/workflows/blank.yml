@@ -1,4 +1,4 @@
-name: execute python program
+name: Execute python program
 on:
   push:
     branches:
@@ -7,12 +7,12 @@ jobs:
   run_py_file:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout python code
-        uses: actions/checkout@v6.0.2
-      - name: run python file
-        uses: actions/setup-python@v6.2.0
-        with:
-          python-version: '3.11'
+      - name: Checkout the code
+        uses: actions/checkout@v2
+      - name: setup python
+        uses: actions/setup-python@v3
       - name: run python code
         run: python app.py
+        
+
         
